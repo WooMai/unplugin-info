@@ -61,7 +61,8 @@ export const UnpluginInfo = createUnplugin<Options | undefined>((option) => {
           gen('author'),
           gen('authorDate'),
           gen('lastTag'),
-          gen('commitsSinceLastTag')
+          gen('commitsSinceLastTag'),
+          gen('branch'),
         ].join('\n');
       } else if (id === ModuleName.BuildMeta) {
         const body = Object.entries(option?.meta ?? {}).map(
